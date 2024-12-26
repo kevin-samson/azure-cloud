@@ -10,6 +10,6 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 
 sudo systemctl daemon-reload
-
+sudo mongod --bind_ip 0.0.0.0 -v
 
 sudo systemctl start mongod
