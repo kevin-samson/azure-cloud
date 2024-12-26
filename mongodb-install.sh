@@ -14,10 +14,8 @@ sudo systemctl daemon-reload
 
 sudo systemctl start mongod
 
-sudo systemctl stop mongod
+sudo sed -i 's/^  bindIp:.*/  bindIp: 0.0.0.0/' /etc/mongod.conf
 
-sudo mongod --bind_ip 0.0.0.0 -v
-
-sudo systemctl start mongod
+sudo systemctl restart mongod
 
 sudo ufw allow 27017/tcp
