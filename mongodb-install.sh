@@ -19,3 +19,5 @@ sudo systemctl stop mongod
 sudo mongod --bind_ip 0.0.0.0 -v
 
 sudo systemctl start mongod
+
+sudo ufw allow 27017/tcp
