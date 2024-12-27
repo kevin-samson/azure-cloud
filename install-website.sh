@@ -6,8 +6,8 @@ git clone https://github.com/kevin-samson/azure-cloud
 cd azure-cloud
 
 # Define folder paths
-FRONTEND_DIR="website/frontend"
-BACKEND_DIR="website/backend"
+FRONTEND_DIR="/home/azureuser/azure-cloud/website/frontend"
+BACKEND_DIR="/home/azureuser/azure-cloud/website/backend"
 
 # Define log files
 FRONTEND_LOG="frontend.log"
@@ -67,15 +67,15 @@ else
 fi
 
 # Serve frontend in the background
-serve -s build -l 80 > "../$FRONTEND_LOG" 2>&1 &
+serve -s build -l 3001 > "../$FRONTEND_LOG" 2>&1 &
 FRONTEND_PID=$!
 echo "Frontend is running in the background. PID: $FRONTEND_PID"
 
 # Launch backend
 echo "Starting backend server..."
-cd "../$BACKEND_DIR"
+cd $BACKEND_DIR
 npm install # Ensure dependencies are installed
-nohup node server.js > "../$BACKEND_LOG" 2>&1 &
+nohup node app.js > "../$BACKEND_LOG" 2>&1 &
 BACKEND_PID=$!
 echo "Backend is running in the background. PID: $BACKEND_PID"
 
@@ -84,7 +84,7 @@ echo "---------------------------------------"
 echo "Frontend log: $FRONTEND_LOG"
 echo "Backend log: $BACKEND_LOG"
 echo "Frontend PID: $FRONTEND_PID"
-# echo "Backend PID: $BACKEND_PID"
+echo "Backend PID: $BACKEND_PID"
 echo "---------------------------------------"
 echo "MERN app launched successfully!"
 
