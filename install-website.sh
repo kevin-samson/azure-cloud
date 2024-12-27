@@ -3,10 +3,11 @@
 
 git clone https://github.com/kevin-samson/azure-cloud
 
+cd azure-cloud
 
 # Define folder paths
-FRONTEND_DIR="Expense-Tracker-App/frontend"
-BACKEND_DIR="Expense-Tracker-App/backend"
+FRONTEND_DIR="website/frontend"
+BACKEND_DIR="website/backend"
 
 # Define log files
 FRONTEND_LOG="frontend.log"
