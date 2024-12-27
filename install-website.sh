@@ -71,7 +71,7 @@ serve -s build -l 3001 > "../$FRONTEND_LOG" 2>&1 &
 FRONTEND_PID=$!
 echo "Frontend is running in the background. PID: $FRONTEND_PID"
 
-sed -i 's/mongodb:\/\/10.0.1.4/mongodb:\/\/10.0.1.5/g' /home/azureuser/azure-cloud/website/backend/DB/Database.js
+sed -i 's/mongodb:\/\/10.0.1.4/mongodb:\/\/10.0.0.4/g' /home/azureuser/azure-cloud/website/backend/DB/Database.js
 # Launch backend
 echo "Starting backend server..."
 cd $BACKEND_DIR
