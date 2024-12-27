@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-git clone https://github.com/Priyanshu9898/Expense-Tracker-App
+git clone https://github.com/kevin-samson/azure-cloud
 
 
 # Define folder paths
