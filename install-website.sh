@@ -72,12 +72,12 @@ FRONTEND_PID=$!
 echo "Frontend is running in the background. PID: $FRONTEND_PID"
 
 # Launch backend
-# echo "Starting backend server..."
-# cd "../$BACKEND_DIR"
-# npm install # Ensure dependencies are installed
-# nohup node server.js > "../$BACKEND_LOG" 2>&1 &
-# BACKEND_PID=$!
-# echo "Backend is running in the background. PID: $BACKEND_PID"
+echo "Starting backend server..."
+cd "../$BACKEND_DIR"
+npm install # Ensure dependencies are installed
+nohup node server.js > "../$BACKEND_LOG" 2>&1 &
+BACKEND_PID=$!
+echo "Backend is running in the background. PID: $BACKEND_PID"
 
 # Print summary
 echo "---------------------------------------"
