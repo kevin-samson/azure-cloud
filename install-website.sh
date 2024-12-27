@@ -60,6 +60,7 @@ fi
 echo "Building and serving frontend..."
 cd $FRONTEND_DIR
 
+sed -i 's/http:\/\/127\.0\.0\.1:3000/http:\/\/NEW_IP_ADDRESS:3000/' /home/azureuser/azure-cloud/website/ftontend/src/utils/ApiRequest.js
 if [ -d "build" ]; then
   echo "Build folder already exists. Skipping build step."
 else

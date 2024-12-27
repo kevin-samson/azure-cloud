@@ -136,10 +136,37 @@
                             "priority": 200,
                             "direction": "Outbound"
                         }
+                    },
+                    {
+                        "name": "Allow-Port-3000",
+                        "properties": {
+                            "protocol": "Tcp",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "3000",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 300,
+                            "direction": "Inbound"
+                        }
+                    },
+                    {
+                        "name": "Allow-Port-3001",
+                        "properties": {
+                            "protocol": "Tcp",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "3001",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 400,
+                            "direction": "Inbound"
+                        }
                     }
                 ]
             }
         },
+
         {
             "type": "Microsoft.Network/networkSecurityGroups",
             "apiVersion": "2021-02-01",
