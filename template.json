@@ -260,7 +260,7 @@
                         "name": "ipConfig",
                         "properties": {
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'frontendSubnet')]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'backendSubnet')]"
                             },
 							"publicIPAddress": {
                                 "id": "[resourceId('Microsoft.Network/publicIPAddresses', concat(parameters('virtualMachines_az104_06_vm0_name'), '-pip'))]"
@@ -400,7 +400,6 @@
                         }
                     }
                 }
-                
             ],
             "dependsOn": [
                 "[resourceId('Microsoft.Network/loadBalancers', 'az104-06-lb')]",
