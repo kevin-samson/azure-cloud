@@ -1,4 +1,4 @@
-const host = "http://172.191.24.31:3000";
+const host = "http://localhost:3000";
 // const host = "http://localhost:5000";
 export const setAvatarAPI = `${host}/api/auth/setAvatar`;
 export const registerAPI = `${host}/api/auth/register`;

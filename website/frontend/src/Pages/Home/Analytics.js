@@ -109,8 +109,8 @@ const Analytics = ({ transactions }) => {
                 {totalTurnOver}
               </div>
               <div className="card-body">
-                <h5 className="card-title" style={{color: "green"}}>Income: <ArrowDropUpIcon /> {totalTurnOverIncome} <CurrencyRupeeIcon /></h5>
-                <h5 className="card-title" style={{color: "red"}}>Expense: <ArrowDropDownIcon />{totalTurnOverExpense} <CurrencyRupeeIcon /></h5>
+                <h5 className="card-title" style={{color: "green"}}>Income: <ArrowDropUpIcon /> {totalTurnOverIncome} AED</h5>
+                <h5 className="card-title" style={{color: "red"}}>Expense: <ArrowDropDownIcon />{totalTurnOverExpense} AED</h5>
                 <div className="d-flex justify-content-center mt-3">
                   <CircularProgressBar
                     percentage={TurnOverIncomePercent.toFixed(0)}
